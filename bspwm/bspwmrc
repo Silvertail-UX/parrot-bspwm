@@ -33,7 +33,7 @@ bspc subscribe desktop_focus | while read -r _ _ desk_id; do
     ~/.config/bspwm/set-wallpaper.sh "$desk_name"
 done &
 
-/home/lelowi/.config/polybar/launch.sh
+~/.config/polybar/launch.sh
 # ----------------------------------------------------------------
 
 
@@ -41,9 +41,8 @@ done &
 wmname LG3G &
 #picom --config ~/.config/picom/picom.conf &
 ~/.config/picom/launch.sh &
-~/.config/eww/launcher.sh &
-#eww daemon &
-#eww open logo &
+eww daemon &
+eww open logo &
 bspc config top_padding 45
 # ----------------------------------------------------------
 
