@@ -1,0 +1,14 @@
+(defwindow logo
+  :geometry (geometry :x 7 :y 5 :width 35 :height 35)
+  :stacking "fg"
+  :decorated false
+  :exclusive false
+  :visible true
+  (image
+    :path "/home/user/.config/eww/scripts/logo.png"
+    :image-width 35
+    :image-height 35
+    :preserve-aspect-ratio true
+  )
+)
+
