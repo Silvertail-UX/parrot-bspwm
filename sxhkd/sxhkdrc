@@ -2,7 +2,7 @@
 # terminal emulator
 super + Return
 	/opt/kitty/bin/kitty
-
+	
 # program launcher
 super + d
 	/usr/bin/rofi -show run
@@ -110,7 +110,7 @@ super + {Left,Down,Up,Right}
 
 # Custom Rezise
 super + alt + {Left,Down,Up,Right}
-    ~/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
+    /home/lelowi/.config/bspwm/scripts/bspwm_resize {west,south,north,east}
 
 # ---------------------- Open_Apps ---------------------
 super + shift + F
@@ -126,7 +126,10 @@ super + shift + M
  /usr/bin/mullvad-browser
 
 super + shift + I
- ~/Descargas/idea-IU-252.26830.84/bin/idea.sh &
+ ~/Descargas/idea-IU-252.26830.84/bin/launch.sh &
+
+super + shift + W
+ /usr/bin/librewolf
 
  # --------------------------------------------------------
 
@@ -154,6 +157,3 @@ super + s
  /usr/bin/maim -m 10 | /usr/bin/xclip -selection clipboard -t image/png
 
 # --------------------------------------------------------
-
-
-
