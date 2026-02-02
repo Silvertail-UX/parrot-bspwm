@@ -1,4 +1,5 @@
 # IMPORTANT: keep 600 perm
+# IMPORTANT: Download sudo pacman -S zsh-syntax-highlighting
 
 #-------------------------- p10k ---------------------------
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
