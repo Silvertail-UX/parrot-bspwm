@@ -16,7 +16,6 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 alias c="clear && printf '\033c'"
 alias mysize="xrandr | grep '*' | cut -d ' ' -f4"
 alias chistory=": > ~/.zsh_history"
-alias fastfetch="fastfetch --logo ~/.config/fastfetch/imagen2.png --logo-type kitty-direct --logo-width 35 --logo-height 20"
 #bat
 alias cat='bat'
 alias catn='bat --style=plain'
@@ -28,6 +27,7 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias pdf='libreoffice --convert-to pdf'
+#alias rwaybar="pkill waybar && waybar"
 #-----------------------------------------------------------
 
 
@@ -43,13 +43,14 @@ setopt histignorealldups sharehistory
 
 #-------------------- zsh_extensiones ----------------------
 
-if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
-if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
 #-----------------------------------------------------------
 
 
@@ -87,5 +88,21 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # ----------------------------------------------------------
 
-# -------------------- fastfetch_perX ----------------------
-# ----------------------------------------------------------
+
+# ---------------------- keybindings -----------------------
+
+# Keybindings correctos (Home / End / etc)
+bindkey -e
+
+bindkey '^[[H' beginning-of-line
+bindkey '^[[F' end-of-line
+
+bindkey '^[[1~' beginning-of-line
+bindkey '^[[4~' end-of-line
+
+bindkey '^[[7~' beginning-of-line
+bindkey '^[[8~' end-of-line
+# Fix Delete key
+bindkey '^[[3~' delete-char
+
+# ---------------------------------------------------------
